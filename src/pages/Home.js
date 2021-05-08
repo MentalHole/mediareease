@@ -20,7 +20,7 @@ function Home(props) {
         <div>
           <div role="list">
             <div role="listitem">
-              <a className="main-post" href="/articles/better-days">
+              <Link className="main-post" to="/articles/better-days">
                 <div className="posttopper toppost">
                   <div className="category movie" style={{ backgroundColor: `#222` }}>
                     <div className="label14">кино</div>
@@ -47,7 +47,7 @@ function Home(props) {
                     ></div>
                   </div>
                 </div>
-              </a>
+              </Link>
               <div>
                 <div role="list" className="postfeed">
 
