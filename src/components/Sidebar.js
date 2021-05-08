@@ -20,7 +20,7 @@ function Sidebar() {
           >
             <FontAwesomeIcon icon={faFilm} className="reacticon bar" />
             <div className="platformgroup-textbox">
-              <div className="label18"></div>
+              <div className="label18">Фильмы</div>
               <div className="label12">9 релизов</div>
             </div>
           </a>
