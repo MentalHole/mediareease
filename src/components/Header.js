@@ -7,7 +7,7 @@ import Movies from '../pages/Movies';
 import TVSeries from '../pages/TVSeries';
 import Mediareease from '../pages/Mediareease';
 
-const Header = (props) => {
+const Header = () => {
 
     return (
         <>
