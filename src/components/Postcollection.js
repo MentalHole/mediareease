@@ -1,11 +1,12 @@
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from '@material-ui/icons';
 import React from 'react';
 
 const Postcollection = (props) => {
     return (
         <div role="listitem" className="postscollection-item">
-            <a href={"/mediareease/articles/" + props.article}>
+            <Link href={"/mediareease/articles/" + props.article}>
                 <div
                     style={{
                         backgroundImage: `url(${props.poster})`,
@@ -32,7 +33,7 @@ const Postcollection = (props) => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 }
