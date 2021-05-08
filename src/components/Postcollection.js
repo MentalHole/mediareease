@@ -5,7 +5,7 @@ import React from 'react';
 const Postcollection = (props) => {
     return (
         <div role="listitem" className="postscollection-item">
-            <a href={"/articles/" + props.article}>
+            <a href={"/mediareease/articles/" + props.article}>
                 <div
                     style={{
                         backgroundImage: `url(${props.poster})`,
