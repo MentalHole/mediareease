@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import Movies from '../pages/Movies';
 import TVSeries from '../pages/TVSeries';
 import Mediareease from '../pages/Mediareease';
-import { Link } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 

@@ -1,6 +1,6 @@
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Postcollection = (props) => {
