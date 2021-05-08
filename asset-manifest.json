@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/mediareease/static/css/main.cd20ebd0.chunk.css",
-    "main.js": "/mediareease/static/js/main.b51957ea.chunk.js",
-    "main.js.map": "/mediareease/static/js/main.b51957ea.chunk.js.map",
+    "main.js": "/mediareease/static/js/main.a68d7516.chunk.js",
+    "main.js.map": "/mediareease/static/js/main.a68d7516.chunk.js.map",
     "runtime-main.js": "/mediareease/static/js/runtime-main.55f64697.js",
     "runtime-main.js.map": "/mediareease/static/js/runtime-main.55f64697.js.map",
-    "static/js/2.868f6a9a.chunk.js": "/mediareease/static/js/2.868f6a9a.chunk.js",
-    "static/js/2.868f6a9a.chunk.js.map": "/mediareease/static/js/2.868f6a9a.chunk.js.map",
+    "static/js/2.0ecb34e0.chunk.js": "/mediareease/static/js/2.0ecb34e0.chunk.js",
+    "static/js/2.0ecb34e0.chunk.js.map": "/mediareease/static/js/2.0ecb34e0.chunk.js.map",
     "index.html": "/mediareease/index.html",
     "static/css/main.cd20ebd0.chunk.css.map": "/mediareease/static/css/main.cd20ebd0.chunk.css.map",
-    "static/js/2.868f6a9a.chunk.js.LICENSE.txt": "/mediareease/static/js/2.868f6a9a.chunk.js.LICENSE.txt",
+    "static/js/2.0ecb34e0.chunk.js.LICENSE.txt": "/mediareease/static/js/2.0ecb34e0.chunk.js.LICENSE.txt",
     "static/media/logo.4de14195.png": "/mediareease/static/media/logo.4de14195.png"
   },
   "entrypoints": [
     "static/js/runtime-main.55f64697.js",
-    "static/js/2.868f6a9a.chunk.js",
+    "static/js/2.0ecb34e0.chunk.js",
     "static/css/main.cd20ebd0.chunk.css",
-    "static/js/main.b51957ea.chunk.js"
+    "static/js/main.a68d7516.chunk.js"
   ]
 }
