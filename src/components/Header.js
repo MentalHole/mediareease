@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="header-topper"></div>
                 <nav className="nav">
                     <div className="logo" href="/">
-                        <a href="/"><img src={logo} style={{ height: 80 }} alt="Logo" /></a>
+                        <a href="/mediareease"><img src={logo} style={{ height: 80 }} alt="Logo" /></a>
                     </div>
                     <ul className="nav-links">
                         <li >
