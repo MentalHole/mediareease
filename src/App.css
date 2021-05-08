@@ -1,0 +1,604 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Yeseva+One&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+.app {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+  flex-direction: column;
+  flex: 1;
+  background-color: rgb(34, 15, 15);
+  color: rgb(231, 231, 231);
+}
+.globalborder {
+  position: absolute;
+  left: auto;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.globalborder.right {
+  left: auto;
+  right: 24px;
+}
+.globalborder.left {
+  left: 24px;
+}
+.header {
+  position: relative;
+  min-height: 96px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 60px;
+}
+.header-topper {
+  height: 24px;
+  background-image: url("https://uploads-ssl.webflow.com/5fe6be22d91ea603db21c921/5fe6c87d40671a05891fd438_topper_pattern_white.svg");
+  background-position: 0 0;
+  background-size: auto;
+}
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  list-style: none;
+  padding: 8px 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.1s ease-in;
+}
+.nav-link.active {
+  border: 1px solid rgb(87, 68, 68);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgb(95, 2, 2);
+  color: rgb(231, 231, 231);
+}
+.nav-link:hover {
+  color: rgb(231, 231, 231);
+  border-bottom: 2px solid #dc6175;
+  border-radius: 4px;
+  transform: translateY(-2px);
+}
+.main-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.maincontent {
+  display: flex;
+  max-width: 1328px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.posts {
+  margin-bottom: 32px;
+  flex: 1;
+  background-color: transparent;
+  color: #fff;
+}
+.main-post {
+  display: flex;
+  height: 100%;
+  min-height: 362px;
+  max-width: 100%;
+  margin-bottom: 32px;
+  margin-left: 0;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: #dc6175;
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.main-post:hover {
+  transform: translateY(-5px);
+}
+.label14 {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.category {
+  margin-right: 8px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 8px #222;
+  text-decoration: uppercase;
+}
+
+.category.movie {
+  margin-right: 8px;
+  background-color: #dc6175;
+}
+.category.tvseries {
+  background-color: #af60bc;
+}
+.category.games {
+  background-color: #a7b12e;
+}
+.category.mediareease {
+  background-color: #61a1dc;
+  user-select: none;
+  box-shadow: none;
+}
+.posttopper {
+  display: flex;
+  overflow: hidden;
+  height: 110px;
+  padding-left: 48px;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  background-image: url("https://uploads-ssl.webflow.com/5fe6be22d91ea603db21c921/5fe6c87d40671a05891fd438_topper_pattern_white.svg");
+  background-position: 0 0;
+  background-size: auto;
+}
+.posttopper.toppost {
+  margin-bottom: 32px;
+  border-radius: 16px 0 0;
+  box-shadow: none;
+}
+.mainpost-preview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.postinfo {
+  display: flex;
+  padding-right: 40px;
+  padding-bottom: 47px;
+  padding-left: 48px;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+}
+.heading-2.toppost {
+  margin-bottom: 9px;
+  box-shadow: none;
+  font-size: 56px;
+  line-height: 56px;
+}
+.heading-2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  background-color: transparent;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 34px;
+}
+.subheading.toppost {
+  box-shadow: none;
+  font-size: 24px;
+}
+.subheading {
+  margin-bottom: 15px;
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.postmeta {
+  display: flex;
+  font-family: "Lora", sans-serif;
+  align-items: center;
+  color: hsla(0, 0%, 100%, 0.5);
+  margin-right: -15px;
+  font-size: 13px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+.latestpost-thumbnail {
+  position: relative;
+  width: 312px;
+  min-height: 282px;
+  margin-top: -102px;
+  margin-right: 24px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: #dc6175;
+  box-shadow: inset 0 0 0 1px rgba(40, 27, 36, 0.1);
+}
+.tracecover {
+  position: absolute;
+  left: auto;
+  top: -96px;
+  right: 16px;
+  bottom: -40px;
+  width: 312px;
+  background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
+  background-position: 100% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: hsla(0, 0%, 100%, 0.5);
+}
+
+.svg-icon circle {
+  stroke: hsla(0, 0%, 100%, 0.5);
+  stroke-width: 1;
+}
+.postfeed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-left: -40px;
+}
+.postscollection-item {
+  flex: 1 0 460px;
+  margin-left: 40px;
+}
+.postfeed-item {
+  display: flex;
+  height: 560px;
+  margin-bottom: 32px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+.postfeed-item:hover {
+  box-shadow: 0 0 10px 8px #dc6175;
+  transform: translateY(-5px);
+}
+.postfeed-item.tvseries:hover {
+  box-shadow: 0 0 10px 8px #af60bc;
+}
+.postfeed-item.games:hover {
+  box-shadow: 0 0 10px 8px #a7b12e;
+}
+.postfeed-item.mediareease:hover {
+  box-shadow: 0 0 10px 8px #61a1dc;
+}
+.postfeed-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  border-radius: 16px;
+  background-image: linear-gradient(180deg, transparent, transparent 25%, #000);
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1);
+  transition: box-shadow 0.2s;
+}
+.heading-2.postfeed {
+  margin-bottom: 9px;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.homecontent-sidebar {
+  display: flex;
+  margin-bottom: 32px;
+  margin-left: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 0 0 290px;
+}
+.mediareease-block {
+  display: flex;
+  margin-bottom: 32px;
+  padding: 24px 24px 8px;
+  min-width: 240px;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 0 290px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.mediareease-block-label {
+  display: flex;
+}
+.mediareease-month {
+  font-size: 34px;
+  font-weight: 600;
+  color: #222;
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  user-select: none;
+}
+.mediareease-platformgroup {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  align-items: center;
+  transition: color 0.2s, transform 0.2s;
+  color: #222;
+  cursor: pointer;
+}
+.mediareease-platformgroup:hover {
+  transform: translateX(5px);
+  color: rgb(133, 196, 255);
+}
+.platformgroup-iconbox {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(97, 161, 220, 0.1);
+  background-position: 50% 50%;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+.platformgroup-iconbox.feed {
+  background-color: #fff;
+}
+.reacticon {
+  font-size: 40px;
+  width: 1em;
+  height: 1em;
+  padding: 8px;
+  border-radius: 50%;
+  color: #61a1dc;
+  background-color: #fff;
+  margin-right: 16px;
+}
+.reacticon.bar {
+  background-color: rgba(97, 161, 220, 0.1);
+}
+.reacticon.bar.vk {
+  color: #fff;
+  background-color: #45668e;
+}
+.reacticon.bar.twitter {
+  color: #fff;
+  background-color: #1DA1F2;
+}
+.reacticon.bar.telegram {
+  color: #fff;
+  background-color: #0088cc;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1em;
+}
+.platformgroup-textbox {
+  display: flex;
+  height: 36px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.label18 {
+  font-size: 18px;
+  line-height: 18px;
+}
+.label12 {
+  color: rgba(34, 34, 34, 0.5);
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.dotseparator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 8px;
+  padding: 15px 35px;
+  align-items: center;
+}
+.paginationbtn {
+  text-transform: uppercase;
+  display: flex;
+  cursor: pointer;
+  color: rgb(126, 126, 126);
+  transition: transform 0.1s ease-in, color 0.1s;
+}
+.paginationbtn.right:hover {
+  transform: translateX(6px);
+  color: #fff;
+}
+.paginationbtn.left:hover {
+  transform: translateX(-6px);
+  color: #fff;
+}
+.pagination-arrow {
+  margin: 0 15px;
+}
+.pagination-counter {
+  color: rgb(126, 126, 126);
+  font-size: 16px;
+}
+
+.categorypage {
+  width: 100%;
+  border-radius: 16px;
+  max-width: 1328px;
+  margin-bottom: 32px;
+  background-color: #dc6175;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 24px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.categorypage.tvseries {
+  background-color: #af60bc;
+}
+.categorypage.games {
+  background-color: #a7b12e;
+}
+.categorypage.mediareease {
+  background-color: #61a1dc;
+}
+.article {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+.articlecover {
+  height: 95vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825a7af8c9397203bfe830_cover_page.jpg");
+}
+.articlecover-gradient {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-image: linear-gradient(
+      180deg,
+      rgba(40, 27, 36, 0),
+      rgb(34, 15, 15)
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 25%);
+}
+.article-wrapper {
+  display: flex;
+  padding-right: 64px;
+  padding-left: 64px;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+}
+.articleinfo {
+  display: flex;
+  width: 100%;
+  max-width: 1248px;
+  padding-bottom: 5vh;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  color: #fff;
+}
+.articleinfo-titles {
+  display: flex;
+  flex-direction: column;
+}
+.articleinfo-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: "Yeseva One", sans-serif;
+  font-size: 80px;
+  line-height: 80px;
+}
+.articleinfo-subtitle {
+  font-family: "Lora", sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+.articleinfo-meta {
+  font-size: 18px;
+}
+.articlecontent-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 48px;
+  padding-right: 48px;
+  align-items: center;
+  background-color: rgb(34, 15, 15);
+}
+.articlecontent {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  background-repeat: 16px;
+  padding: 64px 8.5%;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.articlecontent-intro {
+  font-family: "Lora", sans-serif;
+  font-size: 26px;
+  line-height: 39px;
+  margin-bottom: 32px;
+  color: #dc6175;
+}
+.articlecontent-meat {
+  color: #222;
+  font-family: Lora, sans-serif;
+  font-size: 22px;
+  line-height: 33px;
+}
+.other-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1368px;
+  width: 100%;
+  margin-left: -40px;
+  margin-right: 0;
+  margin-bottom: 19px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
