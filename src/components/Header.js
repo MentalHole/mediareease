@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Movies from '../pages/Movies';
 import TVSeries from '../pages/TVSeries';
 import Mediareease from '../pages/Mediareease';
+import { Link } from '@material-ui/icons';
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
                 <div className="header-topper"></div>
                 <nav className="nav">
                     <div className="logo" href="/">
-                        <a href="/mediareease"><img src={logo} style={{ height: 80 }} alt="Logo" /></a>
+                        <Link href="/mediareease"><img src={logo} style={{ height: 80 }} alt="Logo" /></Link>
                     </div>
                     <ul className="nav-links">
                         <li >
