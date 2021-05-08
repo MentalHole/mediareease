@@ -19,30 +19,30 @@ const Header = () => {
                     </div>
                     <ul className="nav-links">
                         <li >
-                            <NavLink exact to="/" className="nav-link" activeClassName="active">Главная</NavLink>
+                            <NavLink exact to="/mediareease" className="nav-link" activeClassName="active">Главная</NavLink>
                         </li>
                         <li >
-                            <NavLink to="/movies" className="nav-link" activeClassName="active"> Фильмы </NavLink>
+                            <NavLink to="/mediareease/movies" className="nav-link" activeClassName="active"> Фильмы </NavLink>
                         </li>
                         <li >
-                            <NavLink to="/tvseries" className="nav-link" activeClassName="active"> Сериалы </NavLink>
+                            <NavLink to="/mediareease/tvseries" className="nav-link" activeClassName="active"> Сериалы </NavLink>
                         </li>
                         <li >
-                            <NavLink to="/games" className="nav-link" activeClassName="active"> Игры </NavLink>
+                            <NavLink to="/mediareease/games" className="nav-link" activeClassName="active"> Игры </NavLink>
                         </li>
                         <li >
-                            <NavLink to="/mediareease" className="nav-link" activeClassName="active">Релизы</NavLink>
+                            <NavLink to="/mediareease/mediareease" className="nav-link" activeClassName="active">Релизы</NavLink>
                         </li>
                     </ul>
                 </nav>
             </header>
 
             <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/movies" component={Movies} />
-                <Route path="/tvseries" component={TVSeries} />
-                <Route path="/games" component={Games} />
-                <Route path="/mediareease" component={Mediareease} />
+                <Route path="/mediareease" exact component={Home} />
+                <Route path="/mediareease/movies" component={Movies} />
+                <Route path="/mediareease/tvseries" component={TVSeries} />
+                <Route path="/mediareease/games" component={Games} />
+                <Route path="/mediareease/mediareease" component={Mediareease} />
             </Switch>
         </>
     );

@@ -14,8 +14,8 @@ export default function App() {
           <div className="globalborder left"></div>
           <div className="globalborder right"></div>
           <Header />
-          <Route path="/articles/better-days" component={BetterDays} />
-          <Route path="/articles/minari" component={Minari} />
+          <Route path="/mediareease/articles/better-days" component={BetterDays} />
+          <Route path="/mediareease/articles/minari" component={Minari} />
         </div>
       </div>
     </Router>

@@ -4,7 +4,7 @@ import Pag from "../components/Pag";
 import Postcollection from "../components/Postcollection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home(props) {
 
@@ -21,7 +21,7 @@ function Home(props) {
         <div>
           <div role="list">
             <div role="listitem">
-              <NavLink className="main-post" to="/articles/better-days">
+              <Link className="main-post" to="/mediareease/articles/better-days">
                 <div className="posttopper toppost">
                   <div className="category movie" style={{ backgroundColor: `#222` }}>
                     <div className="label14">кино</div>
@@ -48,7 +48,7 @@ function Home(props) {
                     ></div>
                   </div>
                 </div>
-              </NavLink>
+              </Link>
               <div>
                 <div role="list" className="postfeed">
 
