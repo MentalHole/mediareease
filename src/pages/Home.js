@@ -4,6 +4,7 @@ import Pag from "../components/Pag";
 import Postcollection from "../components/Postcollection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Home(props) {
 
