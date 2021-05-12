@@ -51,7 +51,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/games-05-21"
+            href="/mediareease/calendar-05-21"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faCalendarAlt} className="reacticon bar" />
