@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Yeseva+One&display=swap");
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
+li {
+  list-style: none;
+}
+
 a {
   background-color: transparent;
   text-decoration: none;
@@ -269,18 +277,18 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: -40px;
+  margin-left: -32px;
 }
 .postscollection-item {
-  flex: 1 0 460px;
-  margin-left: 40px;
+  display: flex;
+  width: 100%;
+  flex: 1 0 50%;
 }
 .postfeed-item {
   display: flex;
   height: 560px;
   margin-bottom: 32px;
   flex-direction: column;
-  justify-content: space-between;
   border-radius: 16px;
   background-color: #222;
   background-size: cover;
@@ -290,6 +298,10 @@ a {
   cursor: pointer;
   user-select: none;
   transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+.postfeed-item-w {
+  width: 100%;
+  margin-left: 32px;
 }
 .postfeed-item:hover {
   box-shadow: 0 0 10px 8px #dc6175;
@@ -450,6 +462,7 @@ a {
 .paginationbtn {
   text-transform: uppercase;
   display: flex;
+  flex-direction: row;
   cursor: pointer;
   color: rgb(126, 126, 126);
   transition: transform 0.1s ease-in, color 0.1s;
@@ -468,8 +481,21 @@ a {
 .pagination-counter {
   color: rgb(126, 126, 126);
   font-size: 16px;
+  display: flex;
+  flex-direction: row;
 }
-
+.pag-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pag-link {
+  padding: 10px;
+}
+.pag-link.current {
+  font-size: 22px;
+  color: #fff;
+}
 .categorypage {
   width: 100%;
   border-radius: 16px;
@@ -569,7 +595,7 @@ a {
 .articlecontent {
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
+  max-width: 1368px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
@@ -596,9 +622,5 @@ a {
   flex-direction: row;
   max-width: 1368px;
   width: 100%;
-  margin-left: -40px;
-  margin-right: 0;
   margin-bottom: 19px;
-  padding-right: 24px;
-  padding-left: 24px;
 }

@@ -1,10 +1,13 @@
-import React from "react";
-import "./App.css";
-import Header from "./components/Header";
+import React from "react"
+import "./App.css"
+import Header from "./components/Header"
+
+import ScrollToTop from "react-scroll-to-top"
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import BetterDays from "./Articles/Movies/BetterDays";
-import Minari from "./Articles/Movies/Minari";
+import BetterDays from "./Articles/Movies/BetterDays"
+import Minari from "./Articles/Movies/Minari"
+import Gunda from "./Articles/Movies/Gunda"
 
 export default function App() {
   return (
@@ -16,6 +19,8 @@ export default function App() {
           <Header />
           <Route path="/mediareease/articles/better-days" component={BetterDays} />
           <Route path="/mediareease/articles/minari" component={Minari} />
+          <Route path="/mediareease/articles/gunda" component={Gunda} />
+          <ScrollToTop smooth color="#dc6175"/>
         </div>
       </div>
     </Router>

@@ -5,7 +5,6 @@ import Header from '../../components/Header';
 import Postcollection from '../../components/Postcollection'
 import data from '../../data/movies.json'
 import Sidebar from '../../components/Sidebar';
-import usePagination from '../../hooks/usePagination';
 
 function BetterDays() {
     const bgImageGunda = "https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg"
@@ -13,7 +12,7 @@ function BetterDays() {
     return (
         <div className="article">
             <div className="articlecover" style={{
-                backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825a7af8c9397203bfe830_cover_page.jpg")`
+                backgroundImage: `url("https://www.cineuropa.org/Files/2020/02/25/1582641367601.jpg?1582641371660")`
             }}>
                 <div className="articlecover-gradient">
                     <Header />
@@ -48,7 +47,7 @@ function BetterDays() {
                         </div>
                     </div>
                     <div className="other-content">
-                        <Postcollection data={data} itemsPerPage={2} startFrom={1}/>
+                        <Postcollection data={data} itemsPerPage={2}/>
                         <Sidebar />
                     </div>
                 </div>
