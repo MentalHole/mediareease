@@ -1,15 +1,14 @@
 import React from "react"
-import "./App.css"
-import Header from "./components/Header"
-
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import ScrollToTop from "react-scroll-to-top"
 
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import "./App.css"
+import Header from "./components/Header"
 import BetterDays from "./Articles/Movies/BetterDays"
-import Minari from "./Articles/Movies/Minari"
 import Gunda from "./Articles/Movies/Gunda"
+import Footer from "./components/Footer/Footer"
 
-export default function App() {
+const App = () => {
   return (
     <Router>
       <div className="app">
@@ -17,12 +16,15 @@ export default function App() {
           <div className="globalborder left"></div>
           <div className="globalborder right"></div>
           <Header />
-          <Route path="/mediareease/articles/better-days" component={BetterDays} />
-          <Route path="/mediareease/articles/minari" component={Minari} />
-          <Route path="/mediareease/articles/gunda" component={Gunda} />
-          <ScrollToTop smooth color="#dc6175"/>
+          <Route path="/articles/gunda" component={Gunda} />
+          <Route path="/articles/better-days" component={BetterDays} />
+          <Route path="/articles/movies-05-21" component={BetterDays} />
+          <ScrollToTop smooth color="#dc6175" />
         </div>
+        <Footer />
       </div>
     </Router>
-  );
+  )
 }
+
+export default App

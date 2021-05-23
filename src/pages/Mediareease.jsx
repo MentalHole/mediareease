@@ -1,26 +1,30 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDesktop,
   faFilm,
   faGamepad,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
+import Sidebar from "../components/Sidebar";
 
 function Mediareease() {
   return (
-    <div className="mediareease">
-      <div className="maincontent">
-        <div className="posts">
-          <div className="categorypage mediareease">Релизы</div>
-          <div role="list" className="postfeed">
-            <div role="listitem" className="postscollection-item">
+    <div className="maincontent">
+      <div className="posts">
+        <div className="categorypage mediareease">Релизы</div>
+        <div role="list" className="postfeed">
+          <div role="listitem" className="postscollection-item">
+            <Link
+              to="/articles/movies-05-21"
+              className="postfeed-item-w"
+            >
               <div
                 style={{
-                  backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg")`,
+                  backgroundImage: `url("//thumbnails.moviemania.io/phone/movie/600348/411e21/670x1192.jpg")`,
                 }}
-                href="/articles/gunda"
-                className="postfeed-item mediareease  "
+                className="postfeed-item mediareease"
               >
                 <div className="postfeed-contents">
                   <div className="posttopper">
@@ -30,19 +34,23 @@ function Mediareease() {
                     />
                   </div>
                   <div className="postinfo">
-                    <h2 className="heading-2">Май</h2>
-                    <div className="subheading">Фильмы в цифре</div>
+                    <h2 className="heading-2">Фильмы</h2>
+                    <div className="subheading">Май</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div role="listitem" className="postscollection-item">
+            </Link>
+          </div>
+          <div role="listitem" className="postscollection-item">
+            <Link
+              to="/mediareease/movies"
+              className="postfeed-item-w"
+            >
               <div
                 style={{
-                  backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/606fe939aab36448aeacd1ed_cover_card.jpg")`,
+                  backgroundImage: `url("https://cdn.shazoo.ru/487690_WSLSLnQTSK_loki.jpg")`,
                 }}
-                href="/articles/minari"
-                className="postfeed-item mediareease  "
+                className="postfeed-item mediareease"
               >
                 <div className="postfeed-contents">
                   <div className="posttopper">
@@ -52,18 +60,22 @@ function Mediareease() {
                     />
                   </div>
                   <div className="postinfo">
-                    <h2 className="heading-2">Май</h2>
-                    <div className="subheading">Сериалы</div>
+                    <h2 className="heading-2">Сериалы</h2>
+                    <div className="subheading">Май</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div role="listitem" className="postscollection-item">
+            </Link>
+          </div>
+          <div role="listitem" className="postscollection-item">
+            <Link
+              to="/mediareease/tvseries"
+              className="postfeed-item-w"
+            >
               <div
                 style={{
-                  backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6066abaeb2b578e8d256ab13_card_cover.jpg")`,
+                  backgroundImage: `url("https://www.soyuz.ru/public/uploads/files/3/7451126/2020111911281222f644872f.jpg")`,
                 }}
-                href="/articles/the-father"
                 className="postfeed-item mediareease"
               >
                 <div className="postfeed-contents">
@@ -74,34 +86,38 @@ function Mediareease() {
                     />
                   </div>
                   <div className="postinfo">
-                    <h2 className="heading-2">Май</h2>
-                    <div className="subheading">Игры</div>
+                    <h2 className="heading-2">Игры</h2>
+                    <div className="subheading">Май</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div role="listitem" className="postscollection-item">
+            </Link>
+          </div>
+          <div role="listitem" className="postscollection-item mediareease">
+            <Link
+              to="/mediareease/games"
+              className="postfeed-item-w"
+            >
               <div
                 style={{
-                  backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60533bc37f6881c73b6d849b_cover_card.jpg")`,
+                  backgroundImage: `url("https://www.kino-teatr.ru/art/5951/85114.jpg")`,
                 }}
-                href="/articles/ma-raineys-black-bottom"
                 className="postfeed-item mediareease"
               >
                 <div className="postfeed-contents">
                   <div className="posttopper">
                     <FontAwesomeIcon
-                      icon={faDesktop}
+                      icon={faFilm}
                       className="reacticon"
                     />
                   </div>
                   <div className="postinfo">
-                    <h2 className="heading-2">Апрель</h2>
-                    <div className="subheading">Фильмы</div>
+                    <h2 className="heading-2">Фильмы</h2>
+                    <div className="subheading">Апрель</div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
