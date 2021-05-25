@@ -6,7 +6,8 @@ import "./App.css"
 import Header from "./components/Header"
 import BetterDays from "./Articles/Movies/BetterDays"
 import Gunda from "./Articles/Movies/Gunda"
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer"
+import { Grow } from "@material-ui/core"
 
 const App = () => {
   return (

@@ -6,7 +6,6 @@
     "poster": "https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg",
     "article": "gunda",
     "category": "movie",
-    "type": "кино",
     "date": "16.4.2021",
     "tags": "триллер, драма"
   },
@@ -17,7 +16,6 @@
     "poster": "https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg",
     "article": "Гунда",
     "category": "movie",
-    "type": "кино",
     "date": "16.4.2021",
     "tags": "триллер, драма"
   },
@@ -28,7 +26,6 @@
     "poster": "https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg",
     "article": "Гунда",
     "category": "movie",
-    "type": "кино",
     "date": "16.4.2021",
     "tags": "триллер, драма"
   },
@@ -39,7 +36,6 @@
     "poster": "https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/6077fc5b0301ea0ceb0440e8_cover_card.jpg",
     "article": "Гунда",
     "category": "movie",
-    "type": "кино",
     "date": "16.4.2021",
     "tags": "триллер, драма"
   }

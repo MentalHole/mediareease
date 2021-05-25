@@ -1,23 +1,53 @@
-import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import Pagination from '@material-ui/lab/Pagination';
+import React, { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import axios from 'axios'
 import { Container } from '@material-ui/core';
+import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import Postcollection from './postcollection/Postcollection';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        color: "white",
-        '& > *': {
-            marginTop: theme.spacing(2),
-            marginBottom: theme.spacing(2),
-        },
-    },
-}));
+const Pag = (props) => {
+    const [offset, setOffset] = useState(0)
+    const [data, setData] = useState([])
+    const [perPage] = useState(8)
+    const [pageCount, setPageCount] = useState(0)
 
-export default function Pag() {
-    const classes = useStyles();
+
+    const getData = async() => {
+        const data = props.data
+        const slice = data.slice(offset, offset + perPage)
+        setData(slice)
+        setPageCount(Math.ceil(data.length / perPage))
+    }
+
+    const handlePageClick = (e) => {
+        const selectedPage = e.selected
+        setOffset(selectedPage + 4)
+    }
+
+    useEffect(() => {getData()})
     return (
-        <Container margin="50%" alignItems="center" justify="center" className={classes.root}>
-            <Pagination className={classes.root} variant="outlined" count={10} color="secondary" />
-        </Container>
-    );
+        <div className="postfeed">
+            {data.map(post => {
+              return <div key={post.id} className="postscollection-item">
+                <Postcollection post={post} category={props.category} poster={props.poster}/>
+              </div>
+            })}
+            <ReactPaginate
+                previousLabel="в будущее"
+                nextLabel="в прошлое"
+                breakLabel="..."
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName="pagination"
+                previousLinkClassName="previous"
+                nextLinkClassName="next"
+                activeLinkClassName="paginationActive"
+                activeClassName={'active'} />
+        </div>
+    )
 }
+
+
+export default Pag

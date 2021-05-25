@@ -1,6 +1,6 @@
+import React from 'react'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const Mainpost = () => {
@@ -27,7 +27,7 @@ export const Mainpost = () => {
                             icon={faDotCircle}
                             className="dotseparator"
                         />
-                        <div className="genres">триллер, драма</div>
+                        <div className="genres">драма, мелодрама, криминал</div>
                     </div>
                 </div>
                 <div className="latestpost-thumbnail">
