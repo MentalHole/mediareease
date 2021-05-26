@@ -32,7 +32,7 @@ const Header = () => {
                             <NavLink to="/games" className="nav-link" activeClassName="active"> Игры </NavLink>
                         </li>
                         <li >
-                            <NavLink to="/mediareeases" className="nav-link" activeClassName="active">Релизы</NavLink>
+                            <NavLink to="/mediareease" className="nav-link" activeClassName="active">Релизы</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -43,7 +43,7 @@ const Header = () => {
                 <Route path="/movies" component={Movies} />
                 <Route path="/tvseries" component={TVSeries} />
                 <Route path="/games" component={Games} />
-                <Route path="/mediareeases" component={Mediareease} />
+                <Route path="/mediareease" component={Mediareease} />
             </Switch>
         </>
     );

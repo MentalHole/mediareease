@@ -126,9 +126,10 @@ a {
 }
 .posttopper {
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   height: 110px;
-  padding-left: 48px;
+  padding: 0 24px;
   align-items: center;
   border-radius: 16px 16px 0 0;
   background-image: url("https://uploads-ssl.webflow.com/5fe6be22d91ea603db21c921/5fe6c87d40671a05891fd438_topper_pattern_white.svg");
@@ -441,6 +442,7 @@ a {
 .pagination {
   display: flex;
   flex-direction: row;
+  padding: 14px;
   width: 100%;
   justify-content: space-around;
   font-size: 18px;
@@ -449,10 +451,9 @@ a {
   align-items: center;
   margin-right: 32px;
   user-select: none;
-  transition: all .1s ease-in;
+  transition: all .3s ease-in;
 }
 .pagination > li {
-  padding: 14px;
   cursor: pointer;
 }
 .pagination > li:hover {
@@ -466,8 +467,6 @@ a {
   color: #fff;
   background-color: #dc6175;
 }
-.pagination.next:hover {
-}
 .previous:hover {
   transform: translateX(-4px);
 }
@@ -476,6 +475,7 @@ a {
 }
 .categorypage {
   width: 100%;
+  min-width: 850px;
   max-width: 1328px;
   border-radius: 16px;
   margin-bottom: 32px;

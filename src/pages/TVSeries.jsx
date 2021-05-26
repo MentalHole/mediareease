@@ -1,10 +1,11 @@
+import { Grow } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
-import Pag from "../components/Pag";
-import Postcollection from "../components/postcollection/Postcollection";
+import Pag from "../components/Pagination/Pag";
 import Sidebar from "../components/Sidebar";
 
 export default function TVSeries() {
   const [items, setItems] = useState([])
+  const [genres, setGenres] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState(null)
   useEffect(() => {
@@ -12,7 +13,6 @@ export default function TVSeries() {
       .then(res => res.json())
       .then(
         (result) => {
-          setIsLoaded(true)
           setItems(result.results)
         },
         (error) => {
@@ -20,31 +20,20 @@ export default function TVSeries() {
         }
       )
   }, [])
+  
+  if (error) return <div>Error: {error.message}</div>
 
-  if(error) return <div>Error: {error.message}</div>
-  else if (!isLoaded) {
+  else {
     return (
-      <div className="maincontent">
-        <div className="posts">
-          <div className="categorypage tvseries">Сериалы</div>
-          <div className="postfeed">Loading</div>
+      <Grow in>
+        <div className="maincontent">
+          <div className="posts">
+            <div className="categorypage tvseries">Сериалы</div>
+            <Pag items={items} category="tvseries" />
+          </div>
+          <Sidebar />
         </div>
-        <Sidebar />
-      </div>)
-  } else {
-    return (
-      <div className="maincontent">
-        <div className="posts">
-          <div className="categorypage tvseries">Сериалы</div>
-            {/* {items.map((post) => {
-              return <div key={post.id} className="postscollection-item">
-                <Postcollection post={post} category="tvseries" />
-              </div>
-            })} */}
-            <Pag data={items} category="tvseries"/>
-        </div>
-        <Sidebar />
-      </div>
+      </Grow>
     );
   }
 }

@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Header from "../../components/Header";
 import Postcollection from "../../components/postcollection/Postcollection"
-import data from "../../data/movies.json";
 import Sidebar from "../../components/Sidebar";
+import data from "../../data/all.json"
 
 function BetterDays() {
   return (

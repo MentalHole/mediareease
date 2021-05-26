@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import YouTube from "react-youtube"
 
 import Header from "../../components/Header"
-import movies from "../../data/movies.json"
+import data from "../../data/all.json"
 import Sidebar from "../../components/Sidebar"
 import Postcollection from "../../components/postcollection/Postcollection"
 
@@ -86,8 +86,8 @@ function BetterDays() {
             </div>
           </div>
           <div className="other-content">
-            {movies.map((post) => {
-              return <Postcollection post={post} />
+            {data.map((post) => {
+              return <Postcollection key={post.id} post={post} />
             }).slice(0, 2)}
             <Sidebar />
           </div>
