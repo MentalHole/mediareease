@@ -5,12 +5,11 @@ import Sidebar from "../components/Sidebar";
 
 export default function TVSeries() {
   const [items, setItems] = useState([])
-  const [genres, setGenres] = useState([])
-  const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState(null)
+
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/tv/popular?api_key=fe58163391ed2fec90aeeb769d221a42&language=ru-RU&page=1")
-      .then(res => res.json())
+      .then(tv => tv.json())
       .then(
         (result) => {
           setItems(result.results)
@@ -20,7 +19,7 @@ export default function TVSeries() {
         }
       )
   }, [])
-  
+
   if (error) return <div>Error: {error.message}</div>
 
   else {
@@ -29,7 +28,7 @@ export default function TVSeries() {
         <div className="maincontent">
           <div className="posts">
             <div className="categorypage tvseries">Сериалы</div>
-            <Pag items={items} category="tvseries" />
+            <Pag items={items} category="tvseries"/>
           </div>
           <Sidebar />
         </div>

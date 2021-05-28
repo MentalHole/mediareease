@@ -8,7 +8,7 @@ export default function Movies() {
   const [items, setItems] = useState([])
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=fe58163391ed2fec90aeeb769d221a42&language=ru-RU")
-      .then(res => res.json())
+      .then(mov => mov.json())
       .then(
         (result) => {
           setItems(result.results)
@@ -19,7 +19,7 @@ export default function Movies() {
       )
 
   }, [])
-  
+
   if (error) {
     return <div className="maincontent">
       <div className="posts">
@@ -35,11 +35,12 @@ export default function Movies() {
         <div className="maincontent">
           <div className="posts">
             <div className="categorypage">Фильмы</div>
-            <Pag items={items} category="movie" perPage={6}/>
+            <Pag items={items} category="movie" perPage={8} />
           </div>
           <Sidebar />
         </div>
       </Grow>
+      
     );
   }
 }

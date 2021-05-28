@@ -1,12 +1,16 @@
+import React, { useEffect, useState } from "react";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { useDispatch, useSelector } from "react-redux"
+import { useParams, useHistory } from "react-router-dom"
+
 import Header from "../../components/Header";
-import Postcollection from "../../components/postcollection/Postcollection"
+import Pag from "../../components/Pagination/Pag";
 import Sidebar from "../../components/Sidebar";
 import data from "../../data/all.json"
 
-function BetterDays() {
+function CollectionDetails() {
+
   return (
     <div className="article">
       <div
@@ -20,8 +24,8 @@ function BetterDays() {
           <div className="article-wrapper">
             <div className="articleinfo">
               <div className="articleinfo-titles">
-                <div className="articleinfo-title">Лучшие дни</div>
-                <div className="articleinfo-subtitle">Дество с синяками</div>
+                <div className="articleinfo-title"></div>
+                <div className="articleinfo-subtitle">{post.title}</div>
                 <div className="postmeta articleinfo-meta">
                   <div>13.4.2020</div>
                   <FontAwesomeIcon
@@ -32,10 +36,9 @@ function BetterDays() {
                 </div>
               </div>
               <div
-                className="category article-categories"
-                style={{ backgroundColor: "#dc6175" }}
+                className="category movie"
               >
-                кино
+                <div className="label14">кино</div>
               </div>
             </div>
           </div>
@@ -68,7 +71,7 @@ function BetterDays() {
             </div>
           </div>
           <div className="other-content">
-            <Postcollection data={data} itemsPerPage={2} />
+            <Pag items={data} perPage={2}/>
             <Sidebar />
           </div>
         </div>
@@ -77,4 +80,4 @@ function BetterDays() {
   );
 }
 
-export default BetterDays;
+export default CollectionDetails;

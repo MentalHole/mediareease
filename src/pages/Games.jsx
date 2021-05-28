@@ -8,15 +8,14 @@ const Games = () => {
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
 
-  console.log(apiKey)
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?key=22b6606069f9478eac87c4e24d8c9629&rating_top&games_count=20&dates=2021-05-01,2021-05-25`)
-      .then(res => res.json())
+      .then(gm => gm.json())
       .then(
         (result) => {
           setItems(result.results)
         }).catch((error) => {
-          console.error(error)
+          setError(error)
         })
 
   }, [])

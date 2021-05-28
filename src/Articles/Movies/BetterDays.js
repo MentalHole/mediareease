@@ -18,7 +18,6 @@ function BetterDays() {
     },
   }
 
-
   return (
     <div className="article">
       <div

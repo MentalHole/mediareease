@@ -9,45 +9,52 @@ const Pag = (props) => {
     const [perPage] = useState(props.perPage || 8)
     const [pageCount, setPageCount] = useState(0)
 
-    const getData = async () => {
+    const getData = () => {
         try {
             const data = props.items
             const slice = data.slice(offset, offset + perPage)
             setData(slice)
             setPageCount(Math.ceil(data.length / perPage))
         } catch (error) {
-            console.log(error);
+            console.log(error)
         }
     }
     const handlePageClick = (e) => {
         const selectedPage = e.selected
-        setOffset(selectedPage + 3)
+        setOffset(selectedPage + 7)
     }
     useEffect(() => { getData() })
+
     const collection = data.map(post => {
         return <div key={post.id} className="postscollection-item">
             <Postcollection post={post} category={props.category} />
         </div>
     })
-
-    return (
-        <div className="postfeed">
+    if (data.length <= 4) {
+        return <div className="postfeed">
             {collection}
-            <ReactPaginate
-                previousLabel="в будущее"
-                nextLabel="в прошлое"
-                breakLabel="..."
-                pageCount={pageCount}
-                pageRangeDisplayed={2}
-                marginPagesDisplayed={5}
-                onPageChange={handlePageClick}
-                containerClassName="pagination"
-                previousLinkClassName="previous"
-                nextLinkClassName="next"
-                activeLinkClassName="paginationActive"
-            />
         </div>
-    )
+    } else {
+        return (
+
+            <div className="postfeed">
+                {collection}
+                <ReactPaginate
+                    previousLabel="в будущее"
+                    nextLabel="в прошлое"
+                    breakLabel="..."
+                    pageCount={pageCount}
+                    pageRangeDisplayed={2}
+                    marginPagesDisplayed={5}
+                    onPageChange={handlePageClick}
+                    containerClassName="pagination"
+                    previousLinkClassName="previous"
+                    nextLinkClassName="next"
+                    activeLinkClassName="paginationActive"
+                />
+            </div>
+        )
+    }
 }
 
 

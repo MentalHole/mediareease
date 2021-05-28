@@ -599,8 +599,34 @@ a {
 .other-content {
   display: flex;
   flex-direction: row;
+  
   justify-content: space-between;
   max-width: 1368px;
   width: 100%;
   margin-bottom: 19px;
+}
+
+@media only screen and (max-width: 1128px) {
+  body {
+    width: 1000px;
+  }
+  .maincontent {
+    width: 800px;
+    min-width: 400;
+  }
+  .homecontent-sidebar {
+    display: none;
+  }
+  .posts {
+    width: 800px;
+  }
+  .nav {
+    width: 100%;
+    max-width: 800px;
+    margin-left: 60px;
+  }
+  .categorypage {
+    min-width: 200px;
+    width: 800px;
+  }
 }
