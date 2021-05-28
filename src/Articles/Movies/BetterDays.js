@@ -80,7 +80,6 @@ function BetterDays() {
                 приговором. Так что они на недели зарываются в учебники, держа в
                 голове лишь надежду на светлое будущее.
               </p>
-              {/* <iframe id="ytplayer" src="https://www.youtube.com/watch?v=1CbHwPfW4PQ" frameborder="0"></iframe> */}
               <YouTube opts={opts} videoId='1CbHwPfW4PQ'/>
             </div>
           </div>

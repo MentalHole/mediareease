@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useDispatch, useSelector } from "react-redux"
-import { useParams, useHistory } from "react-router-dom"
 
 import Header from "../../components/Header";
 import Pag from "../../components/Pagination/Pag";

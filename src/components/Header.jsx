@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import logo from "./logo.png"
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ const Header = () => {
                             <NavLink to="/games" className="nav-link" activeClassName="active"> Игры </NavLink>
                         </li>
                         <li >
-                            <NavLink to="/mediareease" className="nav-link" activeClassName="active">Релизы</NavLink>
+                            <NavLink to="/mediareeases" className="nav-link" activeClassName="active">Релизы</NavLink>
                         </li>
                     </ul>
                 </nav>

@@ -27,9 +27,9 @@ const App = () => {
             <Route path="/movies" component={Movies} />
             <Route path="/tvseries" component={TVSeries} />
             <Route path="/games" component={Games} />
-            <Route path="/mediareease" component={Mediareease} />
-            <Route path="/articles/:id" component={CollectionDetails} />
+            <Route path="/mediareeases" component={Mediareease} />
             <Route path="/articles/better-days" component={BetterDays} />
+            <Route path="/articles/:id" component={CollectionDetails} />
           </Switch>
           <ScrollToTop smooth color="#dc6175" />
         </div>

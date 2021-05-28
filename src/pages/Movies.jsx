@@ -7,7 +7,7 @@ export default function Movies() {
   const [error, setError] = useState(null)
   const [items, setItems] = useState([])
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=fe58163391ed2fec90aeeb769d221a42&language=ru-RU")
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU`)
       .then(mov => mov.json())
       .then(
         (result) => {
@@ -23,7 +23,7 @@ export default function Movies() {
   if (error) {
     return <div className="maincontent">
       <div className="posts">
-        <div className="categorypage games">Игры</div>
+        <div className="categorypage movie">Фильмы</div>
         <h1>Ошибка: {error.message}</h1>
       </div>
       <Sidebar />

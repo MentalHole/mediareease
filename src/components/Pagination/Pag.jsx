@@ -21,7 +21,7 @@ const Pag = (props) => {
     }
     const handlePageClick = (e) => {
         const selectedPage = e.selected
-        setOffset(selectedPage + 7)
+        setOffset(selectedPage + 8)
     }
     useEffect(() => { getData() })
 
@@ -30,7 +30,8 @@ const Pag = (props) => {
             <Postcollection post={post} category={props.category} />
         </div>
     })
-    if (data.length <= 4) {
+
+    if (data.length <= 1) {
         return <div className="postfeed">
             {collection}
         </div>

@@ -15,7 +15,7 @@ function Sidebar() {
         <div className="mediareease-month">Апрель</div>
         <div role="listitem">
           <a
-            href="/mediareease/movies-05-21"
+            href="/movies"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faFilm} className="reacticon bar" />
@@ -27,7 +27,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/tvseries-05-21"
+            href="/tvseries"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faDesktop} className="reacticon bar" />
@@ -39,7 +39,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/games-05-21"
+            href="/games"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faGamepad} className="reacticon bar" />
@@ -51,7 +51,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/games-05-21"
+            href="/mediareeases"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faCalendarAlt} className="reacticon bar" />
@@ -63,7 +63,7 @@ function Sidebar() {
       <div role="list" className="mediareease-block">
         <div role="listitem">
           <a
-            href="/mediareease/movies-05-21"
+            href="/"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faVk} className="reacticon bar vk" />
@@ -72,7 +72,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/tvseries-05-21"
+            href="/"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faTwitter} className="reacticon bar twitter" />
@@ -83,7 +83,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <a
-            href="/mediareease/games-05-21"
+            href="/"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faTelegramPlane} className="reacticon bar telegram" />

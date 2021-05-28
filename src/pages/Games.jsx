@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { Grow } from "@material-ui/core";
 import Pag from "../components/Pagination/Pag";
-
+import 'dotenv/config'
 
 const Games = () => {
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
-
   useEffect(() => {
-    fetch(`https://api.rawg.io/api/games?key=22b6606069f9478eac87c4e24d8c9629&rating_top&games_count=20&dates=2021-05-01,2021-05-25`)
+    fetch(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_GAME_API}&dates=2021-05-01,2021-05-25&platforms=18,1,7'`)
       .then(gm => gm.json())
       .then(
         (result) => {
           setItems(result.results)
-        }).catch((error) => {
+        },
+        (error) => {
           setError(error)
         })
 
