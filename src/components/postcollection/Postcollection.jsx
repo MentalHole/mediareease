@@ -1,8 +1,8 @@
 import React from "react";
-import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+import { faDotCircle, faStarOfLife } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { faRedditAlien } from "@fortawesome/free-brands-svg-icons";
+import { faStarOfLife } from "@fortawesome/free-brands-svg-icons";
 
 const Postcollection = ({ post, category }) => {
 
@@ -24,7 +24,7 @@ const Postcollection = ({ post, category }) => {
             <div className={"category"}>
               <div className="label14">
                 {post.vote_average}
-                <FontAwesomeIcon icon={faRedditAlien} size={26}/>
+                <FontAwesomeIcon icon={faStarOfLife} size={26}/>
               </div>
             </div>
           </div>
