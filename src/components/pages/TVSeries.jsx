@@ -1,24 +1,24 @@
 import { Grow } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
-import Pag from "../components/Pagination/Pag";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../Sidebar";
 import 'dotenv/config'
+import Postcollection from "../postcollection/Postcollection";
 
 export default function TVSeries() {
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
-  console.log(process.env.REACT_APP_MOVIEDB_API);
+
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU&page=1`)
-      .then(tv => tv.json())
+      .then(res => res.json())
       .then(
         (result) => {
           setItems(result.results)
-        },
-        (error) => {
-          setError(error)
         }
       )
+      .catch(err => {
+        console.log(err)
+      })
   }, [])
 
   if (error) {
@@ -36,7 +36,13 @@ export default function TVSeries() {
         <div className="maincontent">
           <div className="posts">
             <div className="categorypage tvseries">Сериалы</div>
-            <Pag items={items} category="tvseries"/>
+            <div className="postfeed">
+              {items.map((posts) => {
+                return <div key={posts.id} className="postscollection-item">
+                  <Postcollection category="tvseries" post={posts} />
+                </div>
+              })}
+            </div>
           </div>
           <Sidebar />
         </div>

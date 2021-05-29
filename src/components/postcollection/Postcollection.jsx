@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
 const Postcollection = ({ post, category }) => {
-  const [genres, setGenres] = useState('')
 
   if (category === "movie") {
     return <Link className="postfeed-item-w" to={"/articles/" + post.original_title.replace(/ /g, '-')}>
@@ -24,6 +24,7 @@ const Postcollection = ({ post, category }) => {
             <div className={"category"}>
               <div className="label14">
                 {post.vote_average}
+                <FontAwesomeIcon icon={faRedditAlien} size={26}/>
               </div>
             </div>
           </div>
@@ -117,7 +118,7 @@ const Postcollection = ({ post, category }) => {
                 icon={faDotCircle}
                 className="dotseparator"
               />
-              <div className="genres">{genres}</div>
+              <div className="genres">{post.genre_ids}</div>
             </div>
           </div>
         </div>

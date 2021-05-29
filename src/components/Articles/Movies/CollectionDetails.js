@@ -2,10 +2,9 @@ import React from "react";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Header from "../../components/Header";
-import Pag from "../../components/Pagination/Pag";
-import Sidebar from "../../components/Sidebar";
-import data from "../../data/all.json"
+import Header from "../../Header";
+import Sidebar from "../../Sidebar";
+import data from "../../../data/all.json"
 
 function CollectionDetails() {
 
@@ -69,7 +68,6 @@ function CollectionDetails() {
             </div>
           </div>
           <div className="other-content">
-            <Pag items={data} perPage={2}/>
             <Sidebar />
           </div>
         </div>

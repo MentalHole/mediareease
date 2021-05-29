@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../Sidebar";
 import { Grow } from "@material-ui/core";
 
 function Mediareease() {

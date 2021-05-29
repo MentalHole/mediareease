@@ -1,18 +1,18 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
+import { Switch } from "react-router-dom"
 import ScrollToTop from "react-scroll-to-top"
 
 import "./App.css"
 import Header from "./components/Header"
-import Home from "./pages/Home"
-import Movies from "./pages/Movies"
-import TVSeries from "./pages/TVSeries"
-import Games from "./pages/Games"
-import Mediareease from "./pages/Mediareease"
-import BetterDays from "./Articles/Movies/BetterDays"
+import Home from "./components/pages/Home"
+import Movies from "./components/pages/Movies"
+import TVSeries from "./components/pages/TVSeries"
+import Games from "./components/pages/Games"
+import Mediareease from "./components/pages/Mediareease"
+import BetterDays from "./components/Articles/Movies/BetterDays"
 import Footer from "./components/Footer"
-import { Switch } from "react-router-dom"
-import CollectionDetails from "./Articles/Movies/CollectionDetails"
+import CollectionDetails from "./components/Articles/Movies/CollectionDetails"
 
 const App = () => {
   return (

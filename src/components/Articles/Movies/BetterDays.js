@@ -3,18 +3,18 @@ import { faDotCircle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import YouTube from "react-youtube"
 
-import Header from "../../components/Header"
-import data from "../../data/all.json"
-import Sidebar from "../../components/Sidebar"
-import Postcollection from "../../components/postcollection/Postcollection"
+import Header from "../../Header"
+import data from "../../../data/all.json"
+import Sidebar from "../../Sidebar"
+import Postcollection from "../../postcollection/Postcollection"
 
 function BetterDays() {
   const opts = {
-    width: '100%',
-    height: '540',
+    width: "100%",
+    height: "540",
     playerVars: {
       autoplay: 0,
-      showinfo: 0
+      showinfo: 0,
     },
   }
 
@@ -69,9 +69,13 @@ function BetterDays() {
                 класс, а для выходцев из бедных семей дополнительный год
                 обучения может оказаться непосильным испытанием.
               </p>
-              <figure >
-                <img src="https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825ab5a8f987049dba339e_1.jpg" loading="lazy"
-                  alt="Better Days" style={{borderRadius: 12, width: "100%", height: 540}}/>
+              <figure>
+                <img
+                  src="https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825ab5a8f987049dba339e_1.jpg"
+                  loading="lazy"
+                  alt="Better Days"
+                  style={{ borderRadius: 12, width: "100%", height: 540 }}
+                />
               </figure>
               <p>
                 Потому все ученики, от двоечников до отличников, живут под
@@ -80,13 +84,15 @@ function BetterDays() {
                 приговором. Так что они на недели зарываются в учебники, держа в
                 голове лишь надежду на светлое будущее.
               </p>
-              <YouTube opts={opts} videoId='1CbHwPfW4PQ'/>
+              <YouTube opts={opts} videoId="1CbHwPfW4PQ" />
             </div>
           </div>
           <div className="other-content">
-            {data.map((post) => {
-              return <Postcollection key={post.id} post={post} />
-            }).slice(0, 2)}
+            {data
+              .map((post) => {
+                return <Postcollection key={post.id} post={post} />
+              })
+              .slice(0, 2)}
             <Sidebar />
           </div>
         </div>

@@ -100,6 +100,9 @@ a {
   text-transform: uppercase;
 }
 .category {
+  display: flex;
+  align-items: center;
+  align-content: center;
   margin-right: 8px;
   font-weight: 700;
   padding: 8px 16px;
@@ -262,19 +265,19 @@ a {
 }
 .postfeed {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin-right: -32px;
+  margin-left: -32px;
 }
 .postscollection-item {
   display: flex;
-  flex: 50%;
+  flex: 1 0 46%;
+  margin-left: 32px;
   margin-bottom: 32px;
 }
 .postfeed-item-w {
   width: 100%;
-  margin-right: 32px;
 }
 .postfeed-item {
   display: flex;
@@ -451,7 +454,7 @@ a {
   align-items: center;
   margin-right: 32px;
   user-select: none;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .pagination > li {
   cursor: pointer;
@@ -599,7 +602,7 @@ a {
 .other-content {
   display: flex;
   flex-direction: row;
-  
+
   justify-content: space-between;
   max-width: 1368px;
   width: 100%;
