@@ -1,29 +1,31 @@
-import React, { useEffect, useState, Suspense, lazy } from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios'
 import { Grow } from "@material-ui/core";
 
 import Sidebar from "../Sidebar";
-import Postcollection from "../postcollection/Postcollection";
-// const Postcollection = React.lazy(() => import("../postcollection/Postcollection.jsx"))
+import Postcollection from "../Postcollection";
 
 const Games = () => {
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    fetch(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_GAME_API}&dates=2021-05-01,2021-05-25&platforms=18,1,7'`)
-      .then(gm => gm.json())
-      .then(
-        (result) => {
-          setLoading(true)
-          setItems(result.results)
-        },
-        (error) => {
-          setError(error)
-        })
 
+  useEffect(() => {
+    axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_GAME_API}&dates=2021-05-01,2021-05-25&platforms=18,1,7'`)
+      .then(res => {
+        setItems(res.data.results)
+      })
+      .catch(err => setError(err))
   }, [])
 
-  if (error) return <div>Error: {error}...</div>
+  if (error) {
+    return <div className="maincontent">
+      <div className="posts">
+        <div className="categorypage games">Игры</div>
+        <h1>Ошибка: {error.message}</h1>
+      </div>
+      <Sidebar />
+    </div>
+  }
 
   else {
     return (
@@ -32,13 +34,11 @@ const Games = () => {
           <div className="posts">
             <div className="categorypage games">Игры</div>
             <div className="postfeed">
-              <Suspense fallback={<div>Loading...</div>}>
-                {items.map((posts) => {
-                  return <div key={posts.id} className="postscollection-item">
-                    <Postcollection category="games" post={posts} />
-                  </div>
-                })}
-              </Suspense>
+              {items.map((posts) => {
+                return <div key={posts.id} className="postscollection-item">
+                  <Postcollection category="games" post={posts} />
+                </div>
+              })}
             </div>
           </div>
           <Sidebar />

@@ -17,9 +17,9 @@ const useStyles = makeStyles({
 export default function CustomizedBreadcrumbs() {
     const classes = useStyles()
     return (
-        <AppBar position="static" width={1} m={3} p={{ xs: 2, sm: 3, md: 4 }}  className={classes.root}>
-                <Typography className={classes.typography} variant="body1" align = "center" justify = "center" alignitems = "center" color="inherit">
-                    Автор дипломного проекта: <span style={{ textDecoration: 'underline' }}>Культаев Нариман</span> © 2021 Mediareease
+        <AppBar position="static" width={1} m={3} p={{ xs: 2, sm: 3, md: 4 }} className={classes.root}>
+            <Typography className={classes.typography} variant="body1" align="center" justify="center" alignitems="center" color="inherit">
+                Автор дипломного проекта: <span style={{ textDecoration: 'underline' }}>Культаев Нариман</span> © 2021 Mediareease
                 </Typography>
         </AppBar>
     );

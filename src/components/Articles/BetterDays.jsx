@@ -1,19 +1,29 @@
-import React from "react";
-import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import { faDotCircle } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import YouTube from "react-youtube"
 
-import Header from "../../Header";
-import Sidebar from "../../Sidebar";
-import data from "../../../data/all.json"
+import Header from "../Header"
+import data from "../../data/all.json"
+import Sidebar from "../Sidebar"
+import Postcollection from "../Postcollection"
 
-function CollectionDetails() {
+function BetterDays() {
+  const opts = {
+    width: "100%",
+    height: "540",
+    playerVars: {
+      autoplay: 0,
+      showinfo: 0,
+    },
+  }
 
   return (
     <div className="article">
       <div
         className="articlecover"
         style={{
-          backgroundImage: `url("https://www.cineuropa.org/Files/2020/02/25/1582641367601.jpg?1582641371660")`,
+          backgroundImage: `url("https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825a7af8c9397203bfe830_cover_page.jpg")`,
         }}
       >
         <div className="articlecover-gradient">
@@ -21,10 +31,10 @@ function CollectionDetails() {
           <div className="article-wrapper">
             <div className="articleinfo">
               <div className="articleinfo-titles">
-                <div className="articleinfo-title"></div>
-                <div className="articleinfo-subtitle">{post.title}</div>
+                <div className="articleinfo-title">Лучшие дни</div>
+                <div className="articleinfo-subtitle">Дество с синяками</div>
                 <div className="postmeta articleinfo-meta">
-                  <div>13.4.2020</div>
+                  <div>13.4.2021</div>
                   <FontAwesomeIcon
                     icon={faDotCircle}
                     className="dotseparator"
@@ -34,6 +44,7 @@ function CollectionDetails() {
               </div>
               <div
                 className="category movie"
+                style={{ backgroundColor: "#dc6175" }}
               >
                 <div className="label14">кино</div>
               </div>
@@ -50,7 +61,7 @@ function CollectionDetails() {
               «Лучшие дни», вынесенные в заглавие фильма Дерека Цана, подростки
               проводят под бесчеловечным давлением учителей и родителей.
             </p>
-            <div className="articlecontent-meat w-richtext">
+            <div className="articlecontent-meat">
               <p>
                 В ближайшем будущем им предстоит сдать экзамены «гаокао»,
                 результаты которых определят судьбы этих маленьких, но уже таких
@@ -58,6 +69,14 @@ function CollectionDetails() {
                 класс, а для выходцев из бедных семей дополнительный год
                 обучения может оказаться непосильным испытанием.
               </p>
+              <figure>
+                <img
+                  src="https://uploads-ssl.webflow.com/5fec690c2d254248671fe526/60825ab5a8f987049dba339e_1.jpg"
+                  loading="lazy"
+                  alt="Better Days"
+                  style={{ borderRadius: 12, width: "100%", height: 540 }}
+                />
+              </figure>
               <p>
                 Потому все ученики, от двоечников до отличников, живут под
                 тяжелым давлением. Прежде всего от собственных ожиданий, ведь
@@ -65,15 +84,21 @@ function CollectionDetails() {
                 приговором. Так что они на недели зарываются в учебники, держа в
                 голове лишь надежду на светлое будущее.
               </p>
+              <YouTube opts={opts} videoId="1CbHwPfW4PQ" />
             </div>
           </div>
           <div className="other-content">
+            {data
+              .map((post) => {
+                return <Postcollection key={post.id} post={post} />
+              })
+              .slice(0, 2)}
             <Sidebar />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default CollectionDetails;
+export default BetterDays

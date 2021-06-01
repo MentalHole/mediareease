@@ -11,14 +11,14 @@ const Header = () => {
                 <div className="header-topper"></div>
                 <nav className="nav">
                     <div className="logo">
-                        <Link to="/"><img src={logo} style={{ height: 80 }} alt="Logo" /></Link>
+                        <Link to="/"><img src={logo} alt="Logo" /></Link>
                     </div>
                     <ul className="nav-links">
                         <li >
                             <NavLink exact to="/" className="nav-link" activeClassName="active">Главная</NavLink>
                         </li>
                         <li >
-                            <NavLink to="/movies" className="nav-link" activeClassName="active"> Фильмы </NavLink>
+                            <NavLink to="/movie" className="nav-link" activeClassName="active"> Фильмы </NavLink>
                         </li>
                         <li >
                             <NavLink to="/tvseries" className="nav-link" activeClassName="active"> Сериалы </NavLink>

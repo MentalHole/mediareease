@@ -58,6 +58,11 @@ a {
   background-position: 0 0;
   background-size: auto;
 }
+.logo {
+  height: 60px;
+  width: 200px;
+  margin-top: 12px;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -107,8 +112,8 @@ a {
   font-weight: 700;
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #222;
   color: #fff;
+  background-color: #222;
   box-shadow: 0 0 8px #222;
 }
 
@@ -272,7 +277,7 @@ a {
 }
 .postscollection-item {
   display: flex;
-  flex: 1 0 46%;
+  flex: 1 0 34%;
   margin-left: 32px;
   margin-bottom: 32px;
 }
@@ -542,7 +547,7 @@ a {
   padding-bottom: 5vh;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-end;
   color: #fff;
 }
@@ -565,6 +570,9 @@ a {
 }
 .articleinfo-meta {
   font-size: 18px;
+}
+.articleinfo-pop {
+  display: flex;
 }
 .articlecontent-wrapper {
   display: flex;
@@ -601,24 +609,26 @@ a {
 }
 .other-content {
   display: flex;
-  flex-direction: row;
-
+  flex-wrap: no-wrap;
   justify-content: space-between;
   max-width: 1368px;
   width: 100%;
+  flex: 1 0 40%;
   margin-bottom: 19px;
 }
 
-@media only screen and (max-width: 1128px) {
+@media only screen and (max-width: 1125px) {
+  .homecontent-sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   body {
     width: 1000px;
   }
   .maincontent {
     width: 800px;
-    min-width: 400;
-  }
-  .homecontent-sidebar {
-    display: none;
   }
   .posts {
     width: 800px;
@@ -631,5 +641,9 @@ a {
   .categorypage {
     min-width: 200px;
     width: 800px;
+  }
+  .article {
+    max-width: 800px;
+    flex-wrap: nowrap;
   }
 }

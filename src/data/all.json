@@ -19,7 +19,7 @@
     "original_name": "Resident Evil 8 Village",
     "category": "games",
     "type": "игры",
-    "release_date": "18.4.2021",
+    "released": "18.4.2021",
     "genre_ids": "экшен, шутер",
     "votes": 84
   },
@@ -27,11 +27,11 @@
     "id": 3,
     "name": "Hood: Outlaws & Legends",
     "tagline": "",
-    "poster": "https://games.mail.ru/hotbox/content_files/gallery/2021/04/22/7172f8e1349e4e07b7aea5e3729ca74f.jpg",
+    "poster": "https://cdn2.unrealengine.com/hood-outlaws-legends-screenshots-logo-01-1920x1080-ca561b9bc028.png",
     "original_name": "Resident Evil 8 Village",
     "category": "games",
     "type": "игры",
-    "release_date": "18.4.2021",
+    "released": "18.4.2021",
     "genre_ids": "экшен, шутер",
     "votes": 64
   },
@@ -43,7 +43,7 @@
     "original_name": "queens-gambit",
     "category": "tvseries",
     "type": "сериалы",
-    "release_date": "16.4.2021",
+    "first_air_date": "16.4.2021",
     "genre_ids": "драма, спорт",
     "votes": 8.4
   }

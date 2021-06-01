@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react"
+import axios from 'axios'
 import { Grow } from "@material-ui/core"
 
 import Sidebar from "../Sidebar"
-import Postcollection from "../postcollection/Postcollection"
+import Postcollection from "../Postcollection"
 
 export default function Movies() {
-  const [error, setError] = useState(null)
   const [items, setItems] = useState([])
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU`)
-      .then(res => res.json())
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU&page=1`)
       .then(
         (result) => {
-          setItems(result.results)
+          setItems(result.data.results)
         }
       )
+      .catch(err => {
+        setError(err)
+      })
   }, [])
 
   if (error) {
     return <div className="maincontent">
       <div className="posts">
-        <div className="categorypage movie">Фильмы</div>
+        <div className="categorypage tvseries">Сериалы</div>
         <h1>Ошибка: {error.message}</h1>
       </div>
       <Sidebar />
@@ -44,7 +47,6 @@ export default function Movies() {
           <Sidebar />
         </div>
       </Grow>
-
-    );
+    )
   }
 }

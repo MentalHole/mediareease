@@ -1,23 +1,23 @@
-import { Grow } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
+import { Grow } from "@material-ui/core";
+
 import Sidebar from "../Sidebar";
-import 'dotenv/config'
-import Postcollection from "../postcollection/Postcollection";
+import Postcollection from "../Postcollection";
 
 export default function TVSeries() {
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU&page=1`)
-      .then(res => res.json())
+    axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU&page=1`)
       .then(
         (result) => {
-          setItems(result.results)
+          setItems(result.data.results)
         }
       )
       .catch(err => {
-        console.log(err)
+        setError(err)
       })
   }, [])
 
