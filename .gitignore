@@ -17,3 +17,5 @@
 netlify.toml
 
 npm-debug.log*
+
+/.idea
