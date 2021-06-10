@@ -14,8 +14,8 @@
 .env.test.local
 .env.production.local
 
+.idea
+
 netlify.toml
 
 npm-debug.log*
-
-.idea
