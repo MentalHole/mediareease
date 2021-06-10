@@ -10,7 +10,7 @@ export default function TVSeries() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_MOVIEDB_API}&language=ru-RU&page=1`)
+    axios.get(`https://api.themoviedb.org/3/tv/airing_today?api_key=fe58163391ed2fec90aeeb769d221a42&language=ru-RU&page=1`)
       .then(
         (result) => {
           setItems(result.data.results)

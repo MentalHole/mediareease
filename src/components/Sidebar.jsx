@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt, faDesktop, faFilm, faGamepad } from '@fortawesome/free-solid-svg-icons'
+import { faDesktop, faFilm, faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { faTelegramPlane, faTwitter, faVk } from "@fortawesome/free-brands-svg-icons";
 
 function Sidebar() {
@@ -16,47 +16,38 @@ function Sidebar() {
         <div className="mediareease-month">Апрель</div>
         <div role="listitem">
           <Link
-            to="/movies"
+            to="/mediareease/movies-05-21"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faFilm} className="reacticon bar" />
             <div className="platformgroup-textbox">
               <div className="label18">Фильмы</div>
-              <div className="label12">9 релизов</div>
+              <div className="label12">4 релизов</div>
             </div>
           </Link>
         </div>
         <div role="listitem">
           <Link
-            to="/tvseries"
+            to="/mediareease/tvseries-05-21"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faDesktop} className="reacticon bar" />
             <div className="platformgroup-textbox">
               <div className="label18">Сериалы</div>
-              <div className="label12">15 релизов</div>
+              <div className="label12">5 релизов</div>
             </div>
           </Link>
         </div>
         <div role="listitem">
           <Link
-            to="/games"
+            to="/mediareease/games-05-21"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faGamepad} className="reacticon bar" />
             <div className="platformgroup-textbox">
               <div className="label18">Игры</div>
-              <div className="label12">13 релизов</div>
+              <div className="label12">8 релизов</div>
             </div>
-          </Link>
-        </div>
-        <div role="listitem">
-          <Link
-            to="/mediareeases"
-            className="mediareease-platformgroup"
-          >
-            <FontAwesomeIcon icon={faCalendarAlt} className="reacticon bar" />
-            <div className="label18">Календарь</div>
           </Link>
         </div>
       </div>
@@ -64,7 +55,7 @@ function Sidebar() {
       <div role="list" className="mediareease-block">
         <div role="listitem">
           <Link
-            to="/"
+            to="#"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faVk} className="reacticon bar vk" />
@@ -73,7 +64,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <Link
-            to="/"
+            to="#"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faTwitter} className="reacticon bar twitter" />
@@ -82,7 +73,7 @@ function Sidebar() {
         </div>
         <div role="listitem">
           <Link
-            to="/"
+            to="#"
             className="mediareease-platformgroup"
           >
             <FontAwesomeIcon icon={faTelegramPlane} className="reacticon bar telegram" />

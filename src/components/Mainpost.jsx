@@ -1,7 +1,7 @@
 import React from 'react'
-import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
+import {faDotCircle} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {Link} from 'react-router-dom'
 
 export const Mainpost = () => {
     return (
@@ -12,7 +12,7 @@ export const Mainpost = () => {
             <div className="posttopper toppost">
                 <div
                     className="category movie"
-                    style={{ backgroundColor: `#222` }}
+                    style={{backgroundColor: `#222`}}
                 >
                     <div className="label14">кино</div>
                 </div>

@@ -15,7 +15,9 @@ import BetterDays from "./components/Articles/BetterDays"
 import MovieCollectionDetails from "./components/Articles/MovieCollectionDetails"
 import TVCollectionDetails from "./components/Articles/TVCollectionDetails"
 import GameCollectionDetails from "./components/Articles/GameCollectionDetails"
-import MediareeaseCalendar from "./components/MediareeaseCalendar"
+import MovieCalendar from "./components/Calendar/MovieCalendar"
+import GameCalendar from "./components/Calendar/GameCalendar"
+import TVCalendar from "./components/Calendar/TVCalendar";
 
 const App = () => {
   return (
@@ -44,7 +46,9 @@ const App = () => {
             />
             <Route path="/mediareeases" component={Mediareease} />
             <Route path="/articles/better-days" component={BetterDays} />
-            <Route path="/articles/movies-05-21" component={MediareeaseCalendar} />
+            <Route path="/mediareease/movies-05-21" component={MovieCalendar} />
+            <Route path="/mediareease/games-05-21" component={GameCalendar} />
+            <Route path="/mediareease/tvseries-05-21" component={TVCalendar} />
           </Switch>
           <ScrollToTop smooth color="#dc6175" />
         </div>

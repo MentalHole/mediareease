@@ -19,7 +19,7 @@ function Mediareease() {
           <div role="list" className="postfeed">
             <div role="listitem" className="postscollection-item">
               <Link
-                to="/articles/movies-05-21"
+                to="/mediareease/movies-05-21"
                 className="postfeed-item-w"
               >
                 <div
@@ -45,7 +45,7 @@ function Mediareease() {
             </div>
             <div role="listitem" className="postscollection-item">
               <Link
-                to="/mediareease/movies"
+                to="/mediareease/tvseries-05-21"
                 className="postfeed-item-w"
               >
                 <div
@@ -71,7 +71,7 @@ function Mediareease() {
             </div>
             <div role="listitem" className="postscollection-item">
               <Link
-                to="/mediareease/tvseries"
+                to="/mediareease/games-05-21"
                 className="postfeed-item-w"
               >
                 <div
@@ -97,7 +97,7 @@ function Mediareease() {
             </div>
             <div role="listitem" className="postscollection-item mediareease">
               <Link
-                to="/mediareease/games"
+                to="/mediareease/movies-05-21"
                 className="postfeed-item-w"
               >
                 <div

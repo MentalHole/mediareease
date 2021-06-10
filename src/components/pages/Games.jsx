@@ -10,7 +10,7 @@ const Games = () => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_GAME_API}&dates=2021-05-01,2021-05-25&platforms=18,1,7'`)
+    axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_GAME_API}&dates=2021-05-01,2021-05-25&metacritic=60,100&ordering=-released&platforms=18,1,7'`)
       .then(res => {
         setItems(res.data.results)
       })

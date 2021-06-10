@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Header from "../Header"
 import Sidebar from "../Sidebar"
-import localData from "../../data/all.json"
 import Postcollection from "../Postcollection"
 
 function MovieCollectionDetails() {
