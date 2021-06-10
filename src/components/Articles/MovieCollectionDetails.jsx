@@ -32,6 +32,7 @@ function MovieCollectionDetails() {
       console.log(errors)
     })
   }, [id])
+
   const postcollection = items.map((posts) => {
     return (
       <div key={posts.id} className="postscollection-item">
@@ -39,6 +40,7 @@ function MovieCollectionDetails() {
       </div>
     )
   }).slice(0, 2)
+
   return (
     <div className="article">
       <div
@@ -87,18 +89,10 @@ function MovieCollectionDetails() {
             </p>
             <div className="articlecontent-meat w-richtext">
               <p>
-                В ближайшем будущем им предстоит сдать экзамены «гаокао»,
-                результаты которых определят судьбы этих маленьких, но уже таких
-                ответственных людей. Низкие баллы сулят возвращение в выпускной
-                класс, а для выходцев из бедных семей дополнительный год
-                обучения может оказаться непосильным испытанием.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, amet! Sed id necessitatibus veritatis ipsa incidunt ipsam fugiat pariatur vitae numquam. Iste quas asperiores, ipsum aut blanditiis earum. Eos neque placeat eum. Qui, voluptatibus.
               </p>
               <p>
-                Потому все ученики, от двоечников до отличников, живут под
-                тяжелым давлением. Прежде всего от собственных ожиданий, ведь
-                перспектива подвести семью и учителей кажется им смертным
-                приговором. Так что они на недели зарываются в учебники, держа в
-                голове лишь надежду на светлое будущее.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum magnam ea odio eum, nam recusandae quisquam omnis totam aliquid laboriosam vero? Consectetur, vero ab!
               </p>
             </div>
           </div>
